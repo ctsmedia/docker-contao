@@ -1,0 +1,250 @@
+@media (max-width:767px) {
+	#left {
+		display:none;
+	}
+	.showat768 {
+		display:block;
+	}
+	.hideat768 {
+		display:none;
+	}
+	/*----- layout ------- */
+	body {
+		background: #fff;
+	}
+	#main .inside {
+		margin-right:0;
+		margin-left:0;
+	}
+	.image_container {
+		padding: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 10px !important;
+		float: none !important;
+	}
+	.mobilelogo {
+		float:left;
+		display:block;
+		margin:5px;
+	}
+	#main {
+		padding-right:15px;
+		padding-left:15px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#left {
+		padding-left:15px;
+	}
+	.mod_article *[class*="ce_"],
+	.mod_article *[class*="mod_"] {
+		margin-right:10px;
+		margin-left:0;
+	}
+	/*----- burger mobile nav ------- */
+	#jump-to-nav {
+		width:35px;
+		height:33px;
+		float:right;
+		display:block;
+		margin-top:5px;
+		margin-right:10px;
+		padding-top:0;
+		padding-right:100px;
+		background-image:url("../img/nav_mobile.png");
+		background-repeat:no-repeat;
+		font-size:1.5em;
+		text-decoration:none;
+		color:$highlightcolor;
+		background-position: right 2px;
+	}
+	.mod_breadcrumb {
+		display:none;
+	}
+	/*----- mobile nav ------- */
+	#nav-main-mobile {
+		width:auto;
+		height:auto;
+		float:none;
+		clear:both;
+		margin-top:25px;
+		margin-right:10px;
+		background: none;
+	}
+	#nav-main-mobile li {
+		float:none;
+		margin-right:0;
+	}
+	#nav-main-mobile a.trail:hover {
+		color:#fff;
+	}
+	/*------------------ ende mobile nav ---------------------*/
+
+
+	/*----- nav left ------- */
+
+	#nav-left {
+		margin:0 10px 20px;
+		border-left:1px solid $navOffGradient3;
+	}
+
+	/* ----- slider ------- */
+	.slidebox1 .image_container {
+		right:-10px;
+		opacity: 0.1;
+		z-index: 55;
+	}
+	.mod_article .ce_sliderStart {
+		margin-right:0;
+	}
+	.content-slider .slidebox1 {
+		h1,
+		p {
+			position:absolute;
+			margin-right:10%;
+			z-index: 99;
+		}
+	}
+	.slidebox1 p {
+		top:70px;
+	}
+	.sliderdemo {
+		h1 {
+			font-size:2.5em;
+		}
+
+		.content-slider .slidebox1 h1,
+		.content-slider .slidebox1 p {
+			margin-right:10px;
+			margin-left:20px;
+		}
+	}
+
+
+	/* ----- newsletter ------- */
+	.mod_nl_list {
+		margin:15px 10px;
+		padding-bottom:15px;
+		border-left:1px solid $navOffGradient3;
+
+
+		a {
+			&,
+			&:visited,
+			&:hover,
+			&:focus {
+				float:none;
+				display:block;
+			}
+		}
+
+		li {
+			padding-bottom:0;
+		}
+	}
+
+
+	/*----- forms ------- */
+
+	.tableform table {
+		width:100%;
+		border:1px solid $navOffGradient3;
+		line-height:1.4em;
+	}
+	#container input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea,
+	input[type="search"] {
+		width:100%;
+		box-sizing: border-box;
+	}
+	#main .formbody .submit_container {
+		margin-top:10px;
+		padding-top:0;
+		border-top: none;
+	}
+	#container .mod_login {
+		.text,
+		label {
+			display:block;
+		}
+
+		.text {
+			width:100%;
+		}
+
+		.checkbox_container label {
+			display:inline;
+		}
+
+		.submit_container {
+			margin-left:0;
+		}
+
+		.checkbox_container {
+			left:1em;
+			right:auto;
+		}
+	}
+
+	/* ----- footer ------- */
+	#footer .inside {
+		float:none;
+	}
+
+	/* remove Texlink and open up the a tag as a square to simulate just a clik area */
+	.mod_calendar thead .label {
+		display:none;
+	}
+	.mod_calendar tr {
+		width:100%;
+		float:left;
+		clear:both;
+	}
+	.mod_calendar tbody .days {
+		display:none;
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	.mod_calendar tbody .days.active,
+	.mod_calendar thead th {
+		width:100%;
+		float:left;
+		clear:both;
+		display:block;
+		border-bottom:1px solid #fff;
+	}
+	.mod_calendar tbody .header {
+		width:20%;
+		float:left;
+	}
+	.mod_calendar tbody .event {
+		width:75%;
+		float:right;
+		margin-right:10px;
+		margin-bottom:4px;
+		padding-bottom:4px;
+		border-bottom:1px solid #bd5e06;
+	}
+	.mod_calendar tbody .event a:before {
+		display:inline-block;
+		margin-right:10px;
+		content: '\2022';
+	}
+	.mod_calendar thead th {
+		display:inline-block;
+		font-size:1em;
+	}
+	.mod_calendar thead .current,
+	.mod_calendar thead .previous,
+	.mod_calendar thead .next {
+		vertical-align:middle;
+		line-height:40px;
+	}
+	#left .mod
+	_calendar {
+		display:none;
+	}
+}

@@ -1,0 +1,32 @@
+@media print {
+	body {
+		margin: 0; padding: 0;
+		background: #FFF !important;
+		font-size: 14px;
+	}
+
+	.grid12,
+	#wrapper {width: 100.0%;}
+
+	nav,
+	#header-top-bar, #nav-main,
+	.mod_breadcrumb, #social,
+	.mod_newsmenu, .mod_login,
+	#left, .mod_booknav, .pagination {display: none;}
+
+	#main .inside {margin: 0;}
+
+	#container {padding: 0;}
+
+	.accordion
+	{
+		height: auto !important;
+		visibility: visible !important;
+		opacity: 1.0 !important;
+	}
+
+	#footer .mod_newslist,
+	#footer .mod_eventlist,
+	.mod_subscribe,
+	.mod_unsubscribe{display: none;}
+}

@@ -1,0 +1,8 @@
+# This file has been auto-generated during installation
+parameters:
+    database_host: db
+    database_port: 3306
+    database_user: root
+    database_password: '%env(DEFAULT_PASSWORD)%'
+    database_name: '%env(PROJECT_NAME)%'
+    secret: 50255c03da7cfb597807c781f610512d22ed436e8687876befee1190eaad08f2

@@ -1,0 +1,57 @@
+.mod_search {
+	.even,
+	.odd {
+		margin-bottom:1px;
+		border-bottom:1px solid;
+		border-color: $baseBorderColor;
+	}
+
+	> .last {
+		border-bottom: none;
+	}
+
+	h3 a {
+		&,
+		&:visited,
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration:none;
+			color: $highlightcolor;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration:underline;
+		}
+	}
+
+	.relevance {
+		padding-left:10px;
+		font-size:.8em;
+		color:$basecolor;
+	}
+
+	.formbody {
+		padding:1em;
+		border:1px solid;
+		border-color: $baseBorderColor;
+		background-color: $box1Bg;
+	}
+
+	.radio_container span {
+		float:left;
+		margin-right:1em;
+	}
+
+	fieldset {
+		margin:5px 0 0;
+		padding:0;
+	}
+
+	.highlight {
+		font-weight:bold;
+		color: $highlightcolor;
+	}
+}

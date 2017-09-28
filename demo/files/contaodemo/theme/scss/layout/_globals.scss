@@ -1,0 +1,134 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Native elements */
+body {
+    font: $baseFontsize $baseFontstack;
+    color: $basecolor;
+    background-color: $bgColor;
+}
+
+/* FP: Table on page "content elements" */
+
+.content-element-list {
+    td {
+        vertical-align: top;
+    }
+
+    td.col_0,
+    th.head_0 {
+        width: 25%;
+    }
+
+    td.col_1,
+    th.head_1 {
+        width: 20%;
+    }
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+a {
+    color: $basecolor;
+}
+
+.back,
+.error {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    a {
+        text-decoration: none;
+    }
+}
+
+#wrapper {
+    font-size: 1.4em;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.571em;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: $highlightcolor;
+}
+
+h2,
+#container legend {
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+    font-size: 1.7em;
+    color: $highlightcolor;
+}
+
+#container {
+	a:hover {
+		color: $highlightcolor;
+	}
+
+	legend {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+}
+
+/* General Helpers */
+.clearfix,
+#wrapper {
+    &:after {
+        height: 0;
+        clear: both;
+        display: block;
+        line-height: 0;
+        content: ".";
+        visibility: hidden;
+    }
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clr {
+    clear: both;
+}
+
+.showat480,
+.showat768 {
+    display: none;
+}

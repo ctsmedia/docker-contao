@@ -1,0 +1,347 @@
+.mod_navigation ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.nav-main {
+    float:right;
+    margin-right:10px;
+}
+
+/* Unified Off Status for Navigation Items */
+.nav-main > ul > li > a,
+.nav-main > ul > li > .active,
+.nav-main > ul > li > .trail,
+.nav-left a,
+.nav-left strong.active,
+.nav-left strong.trail,
+.nav-left a.trail,
+.pagination a,
+.pagination strong,
+.mod_booknav a,
+.mod_booknav strong {
+    display:block;
+    padding:8px;
+    border:1px solid;
+    font-weight: bold;
+    text-decoration:none;
+    color: $navOffColor;
+    border-color: $navOffBorder;
+    /* Old browsers */
+    background: $navOffGradient1;
+    /* FF3.6+ */
+    background: -moz-linear-gradient(top,  $navOffGradient1 0%, $navOffGradient2 3%, $navOffGradient3 100%);
+    /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navOffGradient1), color-stop(3%,$navOffGradient2), color-stop(100%,$navOffGradient3));
+    /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+    /* IE10+ */
+    background: -ms-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+    /* W3C */
+    background: linear-gradient(to bottom,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+    /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navOffGradient1', endColorstr='$navOffGradient2',GradientType=0 );
+    font-size: 1.143em;
+}
+
+/* Unified Hover Status for Navigation Items */
+.nav-main.dropdown > ul > li:hover > a,
+.nav-main.dropdown > ul > li.submenu:hover > .active,
+.nav-left a:hover,
+.pagination a:hover,
+.mod_booknav a:hover {
+    background: $navHoverBg;
+    border-color: $navHoverBorder;
+    color: $highlightcolor;
+}
+
+/* Unified Active Status for Navigation Items */
+.nav-main > ul > li > .active,
+.nav-main > ul > li > .trail,
+.nav-left strong.active,
+.nav-left strong.trail,
+.nav-left a.trail,
+.pagination strong,
+.mod_booknav strong {
+    border-color: $navOnBorder;
+    color: $navOnColor;
+    /* Old browsers */
+    background: $navOnGradient2;
+    /* FF3.6+ */
+    background: -moz-linear-gradient(top,  $navOnGradient1 0%, $navOnGradient2 3%, $navOnGradient3 96%, $navOnGradient4 100%);
+    /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navOnGradient1), color-stop(3%,$navOnGradient2), color-stop(96%,$navOnGradient3), color-stop(100%,$navOnGradient4));
+    /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+    /* IE10+ */
+    background: -ms-linear-gradient(top,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+    /* W3C */
+    background: linear-gradient(to bottom,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+    /* IE6-9 */;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navOnGradient1', endColorstr='$navOnGradient2',GradientType=0 );
+
+}
+
+/* First level li */
+.nav-main {
+    > ul > li {
+        float:left;
+        margin-right:10px;
+        font-weight:bold;
+    }
+
+    /* Reset last item */
+    li.last {
+        margin-right:0;
+    }
+
+    /* add a padding to bottom for the dropdown effect */
+    &.dropdown {
+        > ul > li.submenu:hover > a,
+        > ul > li.submenu:hover > .active {
+            padding-bottom:15px;
+            border-bottom: none;
+        }
+
+        /* add base dropdown styles */
+        .submenu .level_2 {
+            width:170px;
+            left:-9999em;
+            position:absolute;
+            z-index: 88;
+            border-top-color: $navSubBorderTop;
+        }
+
+        /* add base dropdown styles */
+        .submenu .level_2 {
+            width:170px;
+            left:-9999em;
+            position:absolute;
+            z-index: 88;
+            border-top-color: $navSubBorderTop;
+        }
+
+        /* show dropdown on hover */
+        li.submenu:hover .level_2 {
+            left:auto;
+        }
+
+        /* show dropdown on hover */
+        li.submenu:hover .level_2 {
+            left:auto;
+        }
+    }
+
+    .submenu {
+        .level_2 {
+            border:1px solid;
+            background: $navHoverBg;
+            border-color: $navHoverBorder;
+        }
+
+        /* style the buttons */
+        .level_2 a,
+        .level_2 strong {
+            clear:both;
+            display:block;
+            padding:8px;
+            border-top:1px solid;
+            border-bottom:1px solid;
+            font-size:1.143em;
+            text-decoration: none;
+            border-top-color: $navSubItemBorderTop;
+            border-bottom-color: $navSubItemBorderBottom;
+        }
+        .level_2 a.last,
+        .level_2 strong.last {
+            border-bottom: none;
+        }
+    }
+
+    /* style the hover effect */
+    &.dropdown .level_2 a:hover,
+    .level_2 .active,
+    .level_2 .trail {
+        color: $highlightcolor;
+        background-color: $navHoverBg;
+    }
+}
+
+
+.nav-meta {
+    float:right;
+    margin-top:1px;
+    margin-right:10px;
+    line-height:25px;
+
+    li {
+        display:inline;
+        padding:0 5px;
+    }
+
+    a {
+        text-decoration:none;
+
+        &:hover {
+            text-decoration:underline;
+        }
+    }
+}
+
+.nav-left {
+    margin:20px 0;
+    border:1px solid;
+    font-weight:bold;
+    border-left: none;
+    border-color: $navOffBorder;
+
+    a,
+    strong.active,
+    strong.trail,
+    a.trail {
+        padding:10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    strong.active,
+    strong.trail,
+    a.trail {
+        border-top: 1px solid $navOnBorder;
+    }
+
+    .last a,
+    .last strong.active,
+    strong.trail {
+        border-bottom: none;
+    }
+}
+
+
+.pagination {
+    clear:both;
+    margin-top:10px;
+    padding-top:5px;
+    border-top:1px solid;
+    border-color: $baseBorderColor;
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    li {
+        float:left;
+    }
+
+    a,
+    strong {
+        display:inline-block;
+        margin-right:2px;
+        padding:5px 10px;
+    }
+}
+
+.mod_booknav {
+    clear:both;
+    margin-top:20px;
+    padding-top:10px;
+    border-top:1px solid;
+    border-color: $baseBorderColor;
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    li {
+        float:left;
+    }
+
+    a,
+    strong {
+        margin-right:2px;
+        padding:5px;
+    }
+}
+
+/* Hide the up, prev buttons for pages with this class */
+.noprevlink .mod_booknav {
+    .up,
+    .prev {
+        display:none;
+    }
+}
+
+.mod_breadcrumb {
+    ul {
+        margin:15px 0 0 10px;
+        padding:0;
+        font-size:.929em;
+        list-style-type:none;
+    }
+
+    li {
+        float:left;
+        padding-right:15px;
+        padding-left:5px;
+        background-image:url("#{$path-css-to-img-folder}/icons/icon_arrow-small.png");
+        background-position:right center;
+        background-repeat:no-repeat;
+    }
+
+    .first {
+        padding-left:0;
+    }
+
+    a {
+        text-decoration:none;
+
+        &:hover {
+            text-decoration:underline;
+        }
+    }
+
+    .active {
+        font-weight:bold;
+        background: none;
+        color: $highlightcolor;
+    }
+}
+
+.mod_sitemap {
+    ul {
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    li {
+        margin:0;
+        padding:0 0 5px 15px;
+        background-image:url("#{$path-css-to-img-folder}/bg/sitemap_normal.png");
+        background-repeat:no-repeat;
+    }
+
+    > ul > li.first {
+        background-image:url("#{$path-css-to-img-folder}/bg/sitemap_first.png");
+    }
+
+    li.last {
+        background-image:url("#{$path-css-to-img-folder}/bg/sitemap_last.png");
+    }
+
+    a {
+        display:block;
+        padding:2px;
+        background-color: $wrapperBgColor;
+    }
+}
+

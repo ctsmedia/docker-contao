@@ -1,0 +1,38 @@
+################################################################################
+# Sample Contao Web application
+# running Apache 2, php 7.1 FPM and mariadb all linked together anbd ready 2 use
+################################################################################
+version: '2'
+services:
+  web:
+    image: ctsmedia/baseimage-web-apache:1.2.0
+    container_name: &hostname contao.ctsmedia.local
+    environment:
+      DOCKER_DOMAIN: *hostname
+      PROJECT_NAME: &project contao
+      PHPFPM_HOST: &phpfpm_host php
+      DEFAULT_PASSWORD: &password contaodocker
+      DOCROOT: web
+    volumes_from:
+      - php
+    depends_on:
+      - db
+      - php
+    ports:
+        - "80:80"
+  php:
+    image: ctsmedia/contao:latest
+    environment:
+      DEFAULT_PASSWORD: *password
+      PROJECT_NAME: *project
+    ports:
+      - "9000"
+    volumes:
+      - /var/www/share/project
+  db:
+    image: mariadb:10.1
+    environment:
+      MYSQL_ROOT_PASSWORD: *password
+      MYSQL_DATABASE: *project
+      MYSQL_USER: *project
+      MYSQL_PASSWORD: *project

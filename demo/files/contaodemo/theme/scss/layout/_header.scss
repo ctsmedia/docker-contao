@@ -1,0 +1,93 @@
+/* add some space */
+#header .mod_article {
+    clear: both;
+    margin-top: 20px;
+}
+
+/* position the logo */
+.logo {
+    float: left;
+    clear: both;
+    margin-left: 10px;
+}
+
+/* grey bar on the top */
+.header-top-bar {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid;
+    font-size: .857em; /* 12px */
+    overflow: auto;
+    border-color: $baseBorderColor;
+    background-color: $topbarBg;
+
+    /* inner part of the top bar */
+    .inner {
+        padding: 5px 10px;
+    }
+}
+
+/* rss feed button */
+.rss {
+    float: right;
+    margin-top: 1px;
+    margin-left: 15px;
+}
+
+/* simple line after the navigation and logo */
+.inside > .header-line {
+    clear: both;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    border-bottom: 1px dotted;
+    border-color: $baseBorderColor;
+}
+
+.start .inside > .header-line {
+    padding-top: 0;
+    border: none;
+}
+
+.form-search {
+    width: 200px;
+    float: right;
+    margin-top: 1px;
+
+    .formbody label {
+        margin-top: 0;
+    }
+
+    .text,
+    .submit_container {
+        float: left;
+    }
+
+    .submit:focus {
+        outline: none;
+    }
+
+    .formbody {
+        width: 100%;
+        position: relative;
+        float: left;
+
+        .text {
+            width: 80%;
+            margin: 0;
+            line-height: 1.2em;
+            /*padding-bottom: 1px;
+            */
+            padding: 4px 6px;
+        }
+    }
+}
+
+#header-image-wrapper {
+    overflow: hidden;
+    margin-top: -5px;
+}

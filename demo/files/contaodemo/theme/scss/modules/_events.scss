@@ -1,0 +1,99 @@
+.mod_eventlist.example .event {
+	overflow:hidden;
+	margin:15px 0 0;
+	padding:0 0 15px;
+	border-bottom:1px solid;
+	border-color: $baseBorderColor;
+}
+.mod_calendar .days {
+	background: $tableEvenBg;
+}
+#main .mod_eventlist.example .last {
+	border-bottom: 1px solid transparent;
+}
+.mod_eventlist.example {
+	.layout_upcoming {
+		a {
+			width:99%;
+			float:left;
+			display:block;
+		}
+
+		&.example .date {
+			display:block;
+		}
+
+		&.example .time {
+			display:none;
+		}
+	}
+}
+
+.mod_calendar {
+	.active {
+		&.days {
+			font-weight:bold;
+			background-color: $highlightcolor;
+			color: $navOnColor;
+		}
+
+		a {
+			color: $navOnColor;
+		}
+	}
+}
+
+.mod_calendar,
+#main .mod_calendar {
+	.active a:hover {
+		color: $darkercolor;
+	}
+}
+
+.mod_calendar {
+	.header {
+		text-align:center;
+		font-size:1.8em;
+
+		a {
+			text-decoration:none;
+
+			&:hover {
+				color: $highlightcolor;
+			}
+		}
+	}
+
+	th {
+		text-align:center;
+	}
+
+	.empty {
+		background: $navOffGradient3;
+	}
+
+	.label > span {
+		display:none;
+	}
+
+	thead .label {
+		width:14.28%;
+	}
+}
+
+#left .mod_calendar {
+	width:100%;
+	margin:0;
+	font-size:.9em;
+}
+.box-2 {
+	.last td {
+		text-align:center;
+		border-bottom: none;
+	}
+
+	td {
+		text-align:center;
+	}
+}
+

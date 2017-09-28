@@ -1,0 +1,62 @@
+@media (min-width: 768px) and (max-width: 979px) {
+	/*----- navigation ------- */
+
+	.nav-main,
+	.nav-left {
+		font-size: .8em;
+	}
+	/*----- layout ------- */
+
+	figure {
+		float: none !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	.caption {
+		margin-bottom: 20px;
+	}
+	/*----- slider on demo content elements page ------- */
+	.sliderdemo .slidebox1 .image_container {
+		right: -10px;
+		opacity: 0.1;
+		z-index: 55;
+	}
+	.sliderdemo .content-slider h1,
+	.sliderdemo .content-slider p {
+		position: absolute;
+		margin-right: 10%;
+		z-index: 99;
+	}
+	.sliderdemo .slidebox1 p {
+		top: 70px;
+	}
+	.sliderdemo .content-slider .slidebox1 h1,
+	.sliderdemo .content-slider .slidebox1 p {
+		margin-right: 10px;
+		margin-left: 20px;
+	}
+
+	/*----- forms ------- */
+	#container .mod_login {
+		.text,
+		label {
+			display: block;
+		}
+
+		.text {
+			width: 97%;
+		}
+
+		.checkbox_container label {
+			display: inline;
+		}
+
+		.submit_container {
+			margin-left: 0;
+		}
+	}
+
+	span.captcha_text {
+		display: block;
+	}
+}

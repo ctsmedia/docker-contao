@@ -1,0 +1,382 @@
+
+/* outer wrapper of each ce */
+.ce_accordion {
+	margin-top:-1px;
+	border:1px solid $baseBorderColor;
+	border-bottom: none;
+}
+
+/* headline as trigger for the accordion */
+.toggler {
+	position:relative;
+	padding:6px 10px;
+	border-top:0px solid;
+	border-right:0px solid;
+	border-bottom:1px solid;
+	border-left:0px solid;
+	font-size:1.143em;
+	font-weight:bold;
+	color: $navOffColor;
+	border-color: $navOffBorder;
+	/* Old browsers */
+	background: $navOffGradient1;
+	/* FF3.6+ */
+	background: -moz-linear-gradient(top,  $navOffGradient1 0%, $navOffGradient2 3%, $navOffGradient3 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navOffGradient1), color-stop(3%,$navOffGradient2), color-stop(100%,$navOffGradient3));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+	/* W3C */
+	background: linear-gradient(to bottom,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+	/* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navOffGradient1', endColorstr='$navOffGradient2',GradientType=0 );
+	font-size: 1.143em;
+	cursor: pointer;
+
+	&:after {
+		width:20px;
+		height:20px;
+		right:10px;
+		position:absolute;
+		display:block;
+		background-image:url("../img/icons/icon_arrow-bottom.png");
+		background-repeat:no-repeat;
+		text-indent:-9999em;
+		content: '.';
+		top: 8px;
+		background-position: 100% 5px;
+	}
+
+	/* toggle active and hover status */
+
+	&:hover,
+	&.active {
+		color: $highlightcolor;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	/* inside active */
+	&.ui-state-active:after {
+		background-image:url("../img/icons/icon_arrow-top.png");
+	}
+	&.ui-state-active span {
+		color: $highlightcolor;
+	}
+}
+
+/* styling for inner > inner wrapper */
+.accordion > div {
+	padding:6px 10px;
+	border-bottom:1px solid;
+	border-color: $baseBorderColor;
+	background-color: $box2Bg;
+}
+
+/* stretch up the tables */
+table {
+	width:100%;
+	margin-bottom:10px;
+	border:1px solid;
+	border-collapse:collapse;
+	border-color: $baseBorderColor;
+
+	caption {
+		margin-bottom:1em;
+		text-align:left;
+		font-weight:bold;
+	}
+}
+
+th,
+td {
+	border-right:1px solid;
+	border-bottom:1px solid;
+	border-color: $baseBorderColor;
+	vertical-align:top;
+}
+
+/* headline styling */
+th {
+	padding:1%;
+	text-align:left;
+	background-color: $tableHeadBg;
+}
+
+/* simple body item styles */
+td {
+	padding:8px;
+
+	&.col_last {
+		border-right: none;
+	}
+
+	.odd & {
+		background-color: $tableOddBg;
+	}
+
+	/* bring up some zebra look */
+	.even & {
+		background-color: $tableEvenBg;
+	}
+}
+
+
+.comment_default {
+	margin-bottom:20px;
+}
+.ce_comments {
+	p.info {
+		margin:0;
+		padding:5px;
+		font-weight:bold;
+		color: $highlightcolor;
+	}
+
+	.comment {
+		margin:0;
+		padding:0 5px;
+		border:1px solid;
+		border-color: $baseBorderColor;
+	}
+
+	.reply {
+		margin:10px 0 0 30px;
+		padding:0;
+
+		p.info {
+			background: transparent;
+		}
+	}
+
+	.form {
+		margin-top:30px;
+	}
+
+	.widget {
+		margin-top:1.5em;
+	}
+
+	.text {
+		display:inline-block;
+		width:29%;
+		margin-right:1%;
+	}
+
+	.formbody label {
+		display:inline-block;
+		width:40%;
+		margin-top:0;
+	}
+}
+
+#container {
+	.ce_gallery ul {
+		margin:0;
+		padding:0;
+	}
+
+	.image_container a {
+		img {
+			position:relative;
+			display:inline-block;
+			padding:2px;
+			border:1px solid;
+			border-color: $baseBorderColor;
+		}
+
+		&:hover img {
+			border-color: $highlightcolor;
+		}
+	}
+
+	figure {
+		&.float_left {
+			margin-right:20px;
+		}
+
+		&.float_right {
+			margin-left:20px;
+		}
+	}
+
+	.caption {
+		padding:3px;
+		background-color: $box1Bg;
+	}
+}
+
+
+.ce_downloads {
+	ul {
+		margin:0;
+		padding:0;
+		border-top:1px solid;
+		list-style-type:none;
+		border-color: $baseBorderColor;
+	}
+
+	li {
+		margin-top:2px;
+		padding:1%;
+		border-bottom:1px solid;
+		border-color: $baseBorderColor;
+		background-color: $box2Bg;
+	}
+}
+
+.ce_download,
+.ce_downloads {
+	img {
+		margin-right:1%;
+		vertical-align:middle;
+	}
+}
+.content-slider {
+	position:relative;
+	overflow:hidden;
+	visibility: hidden;
+}
+.ce_sliderStart {
+	position:relative;
+}
+.slider-wrapper {
+	position:relative;
+	overflow:hidden;
+
+	> div {
+		width:100%;
+		height:300px;
+		float:left;
+		padding:0;
+	}
+}
+
+.slidebox1 {
+	position:relative;
+	background: $navOffGradient2;
+	/* Old browsers */
+	background: -moz-linear-gradient(top,  $navOffGradient2 0%, $navOffGradient1 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navOffGradient2), color-stop(100%,$navOffGradient1));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $navOffGradient2 0%,#f4f2f1 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $navOffGradient2 0%,$navOffGradient1 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $navOffGradient2 0%,$navOffGradient1 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom,  $navOffGradient2 0%,$navOffGradient1 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navOffGradient2', endColorstr='$navOffGradient1',GradientType=0 );
+	/* IE6-9 */;
+}
+.slidebox1 h1,
+.slidebox1 p {
+	margin-right:50px;
+	margin-left:20px;
+}
+.slidebox1 .image_container {
+	top:0;
+	right:0;
+	position:absolute;
+}
+.slider-control {
+	height:55px;
+
+	.slider-menu {
+		font-size:3em;
+		line-height:1.6em;
+	}
+
+	.slider-prev,
+	.slider-next {
+		min-width:55px;
+		margin-right:10px;
+		margin-left:10px;
+		padding:8px;
+		text-align:center;
+		border:1px solid;
+		text-decoration:none;
+		display:block;
+		font-weight: bold;
+		color: $navOffColor;
+		border-color: $navOffBorder;
+		/* Old browsers */
+		background: $navOffGradient1;
+		/* FF3.6+ */
+		background: -moz-linear-gradient(top,  $navOffGradient1 0%, $navOffGradient2 3%, $navOffGradient3 100%);
+		/* Chrome,Safari4+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navOffGradient1), color-stop(3%,$navOffGradient2), color-stop(100%,$navOffGradient3));
+		/* Chrome10+,Safari5.1+ */
+		background: -webkit-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+		/* Opera 11.10+ */
+		background: -o-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+		/* IE10+ */
+		background: -ms-linear-gradient(top,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+		/* W3C */
+		background: linear-gradient(to bottom,  $navOffGradient1 0%,$navOffGradient2 3%,$navOffGradient3 100%);
+		/* IE6-9 */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navOffGradient1', endColorstr='$navOffGradient2',GradientType=0 );
+		font-size: 1.143em;
+	}
+}
+
+
+#wrapper .slider-control .slider-prev:hover,
+#wrapper .slider-control .slider-next:hover {
+	border-color:$navOnBorder;
+	color:$navOnColor;
+	/* Old browsers */
+	background: $navOnGradient2;
+	/* FF3.6+ */
+	background: -moz-linear-gradient(top,  $navOnGradient1  0%, $navOnGradient2 3%, $navOnGradient3 96%, $navOnGradient4 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navOnGradient1), color-stop(3%,$navOnGradient2), color-stop(96%,$navOnGradient3), color-stop(100%,$navOnGradient4));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(top,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient(top,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+	/* W3C */
+	background: linear-gradient(to bottom,  $navOnGradient1 0%,$navOnGradient2 3%,$navOnGradient3 96%,$navOnGradient4 100%);
+	/* IE6-9 */;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navOnGradient1', endColorstr='$navOnGradient2',GradientType=0 );
+}
+.sliderdemo .content-slider {
+	margin-right:10px;
+}
+.content-slider,
+.sliderdemo {
+	.slidebox1 {
+		h1,
+		p {
+			margin-right:400px;
+			margin-left:20px;
+		}
+	}
+}
+
+/* Contao Sliderfix */
+.mod_article {
+	.slider-wrapper *[class*="ce_"],
+	.ce_sliderStart {
+		margin:0;
+	}
+
+}
+
+.ce_toplink > a:before {
+	content: "⇑";
+	font-weight: bold;
+	text-decoration: none;
+	float: left;
+	margin-right: 5px;
+}

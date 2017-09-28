@@ -1,0 +1,293 @@
+label[for] {
+	cursor: pointer;
+}
+fieldset {
+	margin:0;
+	padding:0 0 1.5em;
+}
+.checkbox_container label,
+.radio_container label {
+	font-weight:normal;
+}
+
+.formbody {
+	label {
+		display: block;
+		margin-top: 1.5em;
+		padding-bottom: 3px;
+	}
+
+	.checkbox_container label,
+	.radio_container label {
+		display:inline;
+	}
+}
+
+form {
+	.text,
+	.textarea,
+	.captcha {
+		padding:6px;
+		border:1px solid;
+		border-color: $baseBorderColor;
+		background-color: $inputOffBg;
+
+		width:60%;
+	}
+}
+
+.mod_subscribe input[type="text"] {
+	width:210px;
+}
+textarea {
+	width:90%;
+	height:140px;
+}
+
+form {
+	.text,
+	.textarea,
+	.captcha {
+		&:focus,
+		&:hover {
+			background: $inputOnBg;
+			border-color: $highlightcolor;
+		}
+	}
+
+	div.mandatory > input:focus {
+		border:1px solid;
+		border-color: $errorColor;
+		color: $errorColor;
+	}
+}
+
+
+select {
+	width:63%;
+	padding:4px 3px 4px 1px;
+	border:1px solid;
+	border-color: $baseBorderColor;
+	background-color: $inputOffBg;
+}
+.checkbox_container,
+.radio_container {
+	span {
+		display:block;
+	}
+
+	+ br {
+		display:none;
+	}
+
+	label,
+	input {
+		vertical-align:middle;
+	}
+}
+
+.formbody input[type="checkbox"],
+x:-moz-any-link {
+	top:0;
+	position:relative;
+}
+.checkbox_container {
+	margin-top:10px;
+}
+div.submit_container {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+form table td {
+	padding-top:3px;
+	padding-bottom:3px;
+
+	&:first-child {
+		width:45%;
+		padding-bottom:0;
+		text-align:left;
+	}
+}
+
+.tableform table {
+	width:92%;
+	margin-top:1.5em;
+	margin-bottom:0;
+}
+#container {
+	.tableform .formbody,
+	.formbody .formbody {
+		width:100%;
+		overflow:hidden;
+	}
+}
+.formbody .formbody {
+	padding-top:0;
+}
+legend {
+	padding-right:6px;
+	color: $confirmColor;
+}
+fieldset table {
+	width:92%;
+	margin-top: 1em ! important;
+	margin-bottom: 1em ! important;
+
+	td:first-child {
+		width:140px;
+		text-align:left;
+	}
+}
+
+span.mandatory {
+	display:inline;
+	padding-left:2px;
+	font-weight:bold;
+	color: $errorColor;
+}
+p {
+	.confirm {
+		color: $confirmColor;
+	}
+
+	.error {
+		margin-bottom:6px;
+		font-weight:bold;
+		color: $errorColor;
+	}
+}
+
+input.captcha {
+	width:48px;
+}
+span.captcha_text {
+	font-weight:normal;
+}
+:first-child + html span.captcha_text {
+	top:-3px;
+	position:relative;
+}
+#container .submit {
+	display:inline-block;
+	padding:8px;
+	border:1px solid;
+	font-weight:bold;
+	border-color: $navOnBorder;
+	color: #ffffff;
+	/* Old browsers */
+	background: $navOnGradient2;
+	/* FF3.6+ */
+	background: -moz-linear-gradient(top,  #FF9B50 0%, $highlightcolor 3%, $highlightcolor 96%, #DE601A 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF9B50), color-stop(3%,$highlightcolor), color-stop(96%,$highlightcolor), color-stop(100%,#DE601A));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(top,  #FF9B50 0%,$highlightcolor 3%,$highlightcolor 96%,#DE601A 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top,  #FF9B50 0%,$highlightcolor 3%,$highlightcolor 96%,#DE601A 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient(top,  #FF9B50 0%,$highlightcolor 3%,$highlightcolor 96%,#DE601A 100%);
+	/* W3C */
+	background: linear-gradient(to bottom,  #FF9B50 0%,$highlightcolor 3%,$highlightcolor 96%,#DE601A 100%);
+	/* IE6-9 */;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF9B50', endColorstr='$highlightcolor',GradientType=0 );
+	cursor: pointer;
+}
+#container .submit:hover {
+	display:inline-block;
+	border-color: $navOnGradient4;
+	color: #ffffff;
+	/* Old browsers */
+	background: $navOnGradient4;
+	/* FF3.6+ */
+	background: -moz-linear-gradient(top,  #DE601A 0%, $highlightcolor 10%, $highlightcolor 96%, #FF9B50 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DE601A), color-stop(10%,$highlightcolor), color-stop(96%,$highlightcolor), color-stop(100%,#FF9B50));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(top,  #DE601A 0%,$highlightcolor 10%,$highlightcolor 96%,#FF9B50 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top,  #DE601A 0%,$highlightcolor 10%,$highlightcolor 96%,#FF9B50 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient(top,  #DE601A 0%,$highlightcolor 10%,$highlightcolor 96%,#FF9B50 100%);
+	/* W3C */
+	background: linear-gradient(to bottom,  #DE601A 0%,$highlightcolor 10%,$highlightcolor 96%,#FF9B50 100%);
+	/* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$highlightcolor', endColorstr='$highlightcolor',GradientType=0 );
+	cursor: pointer;
+}
+select {
+	width:63%;
+	padding:4px 3px 4px 1px;
+	border:1px solid;
+	border-color: $baseBorderColor;
+}
+.checkbox_container,
+.radio_container {
+	span {
+		display:block;
+	}
+
+	br {
+		display:none;
+	}
+}
+
+.checkbox_container {
+	margin-top:10px;
+
+	label,
+	input {
+		vertical-align:middle;
+	}
+}
+#ctrl_notify {
+	padding:0;
+}
+
+.ce_form div.submit_container,
+.ce_comments div.submit_container,
+.mod_lostPassword div.submit_container,
+.mod_personalData div.submit_container {
+	padding-top:20px;
+	border-top:1px dotted;
+	border-color: $baseBorderColor;
+}
+#container {
+	.mod_lostPassword,
+	.mod_login {
+		position:relative;
+
+		.text {
+			width:74.4%;
+			display:inline-block;
+		}
+
+		br {
+			display:none;
+		}
+	}
+}
+
+label,
+#container .mod_login label {
+	width:20%;
+	display:inline-block;
+}
+
+.mod_login .checkbox_container {
+	float:right;
+	padding-top:8px;
+}
+#container .mod_login .checkbox_container label {
+	width:120px;
+	margin-top:3px;
+}
+.mod_login .submit_container {
+	margin-left:20.3%;
+	border: none;
+}
+
+.form-search div.submit_container {
+	margin: 0;
+	padding: 0;
+	margin-top: -1px;
+}

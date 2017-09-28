@@ -1,0 +1,14 @@
+.mod_faqpage {
+	section {
+		padding-bottom:20px;
+	}
+
+	p.info {
+		margin:10px 0 0;
+		padding:0 0 5px;
+		border-bottom:1px solid;
+		font-size:1.2em;
+		font-style:italic;
+		border-color: $baseBorderColor;
+	}
+}

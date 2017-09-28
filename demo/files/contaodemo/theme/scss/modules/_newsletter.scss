@@ -1,0 +1,70 @@
+.mod_subscribe,
+.mod_unsubscribe {
+	.checkbox_container {
+		margin:10px 0;
+		padding:10px 0;
+		border:1px dotted;
+		border-left: 0;
+		border-right: 0;
+		border-color: $baseBorderColor;
+	}
+
+	.text {
+		width:40%;
+	}
+
+	form {
+		padding:1em;
+		border:1px solid;
+		border-color: $baseBorderColor;
+		background-color: $box1Bg;
+	}
+}
+
+.mod_nl_list {
+	margin:20px 0 0;
+	background-color:$navOffGradient1;
+	border:1px solid;
+	font-weight:bold;
+	color:$navOffColor;
+	border-left: none;
+	border-color: $baseBorderColor;
+	background-color: $navOffGradient2;
+
+	h2 {
+		margin:0;
+		padding:10px;
+		border-bottom:1px solid;
+		color:$highlightcolor;
+		border-color: $baseBorderColor;
+	}
+
+	ul {
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+
+	li {
+		overflow:hidden;
+		margin:15px 0 0;
+		padding:0 10px 15px;
+	}
+
+	a {
+		&,
+		&:visited,
+		&:hover,
+		&:focus {
+			float:left;
+			padding:3px 0 0;
+			text-decoration:none;
+		}
+
+		&:hover,
+		&:focus {
+			color: $highlightcolor;
+		}
+	}
+}
+

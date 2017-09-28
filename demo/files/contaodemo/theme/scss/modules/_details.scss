@@ -1,0 +1,30 @@
+/* Infos like author etc. */
+.layout_full {
+	.info {
+		margin-top:0;
+		padding-top:0;
+		padding-bottom:5px;
+		border-bottom:1px dotted;
+		font-style:italic;
+		border-color: $baseBorderColor;
+	}
+
+	/* Reset headline */
+	h1 {
+		margin-bottom:3px;
+	}
+
+	h2 {
+		margin-bottom:0;
+		border-bottom: none;
+	}
+}
+
+/* Repeating hint for events */
+.recurring {
+	padding:5px;
+	background-color: $navOnGradient1;
+	border:1px solid $navOnBorder;
+	color:#fff;
+}
+

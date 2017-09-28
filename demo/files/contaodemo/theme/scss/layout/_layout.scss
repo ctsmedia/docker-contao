@@ -1,0 +1,40 @@
+/* Layout parts */
+#wrapper {
+    background-color: $wrapperBgColor;
+}
+
+#main {
+    max-width: 100%;
+    overflow: hidden;
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    padding: 0 0 60px;
+}
+
+#left {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.columns2 #main .inside {
+    padding-left: 10px;
+}
+
+#container {
+    clear: both;
+    padding-bottom: 20px;
+}
+
+.box-1 {
+    padding: 1em;
+    border: 1px solid;
+    border-color: $baseBorderColor;
+    background-color: $box1Bg;
+}
+
+.pdf_link {
+    right: 10px;
+    position: absolute;
+    top: 78px;
+}
