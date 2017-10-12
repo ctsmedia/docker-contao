@@ -16,6 +16,13 @@ RUN rm -r /tmp/*
 # Also clean up cache
 RUN rm -r /var/cache/*
 
+# Install Contao Manager
+RUN curl -o web/contao-manager.php -L https://download.contao.org/contao-manager.phar
+
+# Link the console cmd
+RUN mkdir bin \
+    && ln -s ./../vendor/bin/contao-console bin/console
+
 # we make sure everything is writeable also for connected containers. it's ok because it's just for local development
 # and not prod use
 RUN chmod -R 0777 .

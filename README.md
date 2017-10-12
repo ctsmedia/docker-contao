@@ -27,6 +27,17 @@ Run a fresh Contao installation or contao demo within a minute.
 - *The install tool password for the demo is **contaodocker***
 - *The demo data is based on the work  of [forums](https://community.contao.org/de/showthread.php?67049-Contao-default-Theme-quot-Music-Academy-quot&p=447691&viewfull=1#post447691). Thanks to Andreas.  
  
+## Contao Manager
+
+This setup also provides the Contao Manager. You can access it via calling http://localhost/contao-manager.php
+
+## Troubleshooting
+
+- if you have run maintenance tasks via cli from the php container as root, make sure it's accessible for www-data user
+- the demo data is not tested against every version. Maybe checking the install tool helps
+- if you have switched between contao versions and the style looks broken you may want to clear the browser cache
+- run the maintenance tasks via contao backend (that way it's done as www-data user directly)
+
 ## Versions
 
 You can use minor versions like 4.4 or 4.3 or full versions incl. bugfix releases. Minor version are built against the latest bugfix release. if you choose for example **4.3** it was built using **4.3.11**.
