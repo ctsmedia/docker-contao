@@ -53,6 +53,30 @@ See all pre built versions [here](https://hub.docker.com/r/ctsmedia/contao/tags/
 The demo data prepared for contao 4 is taken from the [forums](https://community.contao.org/de/showthread.php?67049-Contao-default-Theme-quot-Music-Academy-quot&p=447691&viewfull=1#post447691)
 Thanks to Andreas.
 
+## Develop Contao Extensions / Bundles
+
+This setup is also perfectly suited for easily develop contao bundles. If you for example develop a bundle named "ctsmedia/test-bundle".
+
+1. Copy the docker-compose.yml into your bundle folder
+2. Add a bind entry to load your bundle into the container
+```dockerfile
+  php:
+    image: ctsmedia/contao:latest
+    environment:
+      DEFAULT_PASSWORD: *password
+      PROJECT_NAME: *project
+    ports:
+      - "9000"
+    volumes:
+      - /var/www/share/project
+      - ./test-bundle:/var/www/share/test-bundle:ro
+
+```
+3. Add the bundle to the contao installation 
+ 3.1 `composer config repositories.test-bundle path ../test-bundle`
+ 3.2 `composer require cts/test-bundle:*` (Make sure the composer.json in test-bundle folder has a version entry. otherwise it can not recognized )
+4. 
+
 ## Building 
 if you want to build a specific version which is not remotely available you can do so by running:
 ```bash
