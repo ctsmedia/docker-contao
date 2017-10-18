@@ -16,10 +16,6 @@ Run a fresh Contao installation or contao demo within a minute.
 2. Startup docker with `docker-compose up -d` in your terminal and the current folder
 3. Run `docker exec dockercontao_php_1 bash -c "php ../install-demo.php"`
 4. The demo is now running at http://localhost/
-5. You need to run the Maintance programm once so that everything is fully shown correct. 
- 5.1 Go to the backend. It's using the official demo data: User **k.jones** Password **kevinjones**
- 5.2 Purge data in the [maintenance](http://localhost/contao?do=maintenance) section
- 5.3 Your done
  
 ---
  

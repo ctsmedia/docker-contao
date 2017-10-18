@@ -34,7 +34,15 @@ try {
 
 echo "Installing media files\n";
 passthru("cp -r /var/www/share/data/demo/files/* /var/www/share/project/files/");
+
+echo "Running contao tasks\n";
+passthru("php bin/console contao:filesync");
+passthru("php bin/console contao:symlinks");
+
+echo "Setting permissions";
 passthru("chown -R www-data:www-data /var/www/share/project/files/contaodemo");
 
+
+
 echo "Cleaning cache\n";
-passthru("rm -r /var/www/share/project/var/cache/*");
+passthru("rm -fr /var/www/share/project/var/cache/*");

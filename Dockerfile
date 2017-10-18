@@ -14,7 +14,7 @@ RUN composer create-project contao/managed-edition:$CONTAO_VERSION .
 # https://github.com/contao/core-bundle/blob/master/src/Command/AbstractLockedCommand.php#L32
 RUN rm -r /tmp/*
 # Also clean up cache
-RUN rm -r /var/cache/*
+RUN rm -fr var/cache/*
 
 # Install Contao Manager
 RUN curl -o web/contao-manager.php -L https://download.contao.org/contao-manager.phar
