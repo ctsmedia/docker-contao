@@ -2,7 +2,7 @@
 
 echo "Preparing config\n";
 copy("/var/www/share/data/config/localconfig.php", "/var/www/share/project/system/config/localconfig.php");
-chmod("/var/www/share/project/system/config/localconfig.php", 777);
+chmod("/var/www/share/project/system/config/localconfig.php", 0777);
 passthru("chown www-data:www-data /var/www/share/project/system/config/localconfig.php");
 
 if (!is_dir("/var/www/share/project/app/config")) {
@@ -10,7 +10,7 @@ if (!is_dir("/var/www/share/project/app/config")) {
     chmod("/var/www/share/project/app/config/", 0777);
 }
 copy("/var/www/share/data/config/parameters.yml", "/var/www/share/project/app/config/parameters.yml");
-chmod( "/var/www/share/project/app/config/parameters.yml", 777);
+chmod( "/var/www/share/project/app/config/parameters.yml", 0777);
 passthru("chown www-data:www-data /var/www/share/project/app/config/parameters.yml");
 
 echo "Setting up db with demo data\n";
@@ -39,7 +39,7 @@ echo "Running contao tasks\n";
 passthru("php bin/console contao:filesync");
 passthru("php bin/console contao:symlinks");
 
-echo "Setting permissions";
+echo "Setting permissions\n";
 passthru("chown -R www-data:www-data /var/www/share/project/files/contaodemo");
 
 

@@ -22,6 +22,7 @@ services:
         - "80:80"
   php:
     image: ctsmedia/contao:latest
+    container_name: contao_php # Only to make the readme example only work. Can / Should be dynamic in general
     environment:
       DEFAULT_PASSWORD: *password
       PROJECT_NAME: *project

@@ -14,7 +14,7 @@ Run a fresh Contao installation or contao demo within a minute.
 
 1. Download or copy the contents of the `docker-compose.yml` file. No need to checkout the repository unless you want to build your own specific versions.
 2. Startup docker with `docker-compose up -d` in your terminal and the current folder
-3. Run `docker exec dockercontao_php_1 bash -c "php ../install-demo.php"`
+3. Run `docker exec --user www-data contao_php bash -c "php ../install-demo.php"`
 4. The demo is now running at http://localhost/
  
 ---
@@ -68,10 +68,11 @@ This setup is also perfectly suited for easily develop contao bundles. If you fo
       - ./test-bundle:/var/www/share/test-bundle:ro
 
 ```
-3. Add the bundle to the contao installation 
- 3.1 `composer config repositories.test-bundle path ../test-bundle`
- 3.2 `composer require cts/test-bundle:*` (Make sure the composer.json in test-bundle folder has a version entry. otherwise it can not recognized )
-4. 
+
+3. Connect to the container: `docker exec -it contao_php bash`
+4. Add the bundle to the contao installation  
+4.1 `docker exec --user www-data contao_php bash -c "composer config repositories.test-bundle path ../test-bundle"`   
+4.2 `docker exec --user www-data contao_php bash -c "composer require cts/test-bundle:*"` (Make sure the composer.json in test-bundle folder has a version entry. otherwise it can not recognized, we use www-data so we don't get any problems with written files by postcripts) 
 
 ## Building 
 if you want to build a specific version which is not remotely available you can do so by running:
