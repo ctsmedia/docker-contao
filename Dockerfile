@@ -9,6 +9,7 @@ WORKDIR /var/www/share/project
 
 # Install contao
 RUN composer create-project contao/managed-edition:$CONTAO_VERSION .
+RUN chmod -R 0777 /var/www/composer
 
 # Cleanup tmp dir because contaos post command do some unusal stuff which breaks the system if it was run as root
 # https://github.com/contao/core-bundle/blob/master/src/Command/AbstractLockedCommand.php#L32
